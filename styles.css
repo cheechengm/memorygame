@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.container {
+    text-align: center;
+}
+
+#game-board {
+    display: grid; /* Use grid layout for the game board */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 10px; /* Gap between cards */
+    justify-content: center; /* Horizontally center cards */
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff; /* White cards */
+    border-radius: 5px;
+    cursor: pointer;
+    /* Box shadow for a subtle effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Center content vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Hide content by default */
+    font-size: 0;
+}
+
+.card.flip {
+    background-color: #007bff; /* Blue color for flipped cards */
+    /* Show content when flipped */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #ffffff; /* Text color for flipped cards */
+}
+
+.card.matched {
+    visibility: hidden; /* Hide matched cards */
+}
+
+/* Add this CSS to center the congratulatory message and restart button */
+.congratulations-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.restart-btn {
+    margin-top: 10px;
+}
